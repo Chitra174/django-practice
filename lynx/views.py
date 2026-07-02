@@ -6,6 +6,7 @@ from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate,login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
 
 # Create your views here.
 def index(request) :
@@ -19,6 +20,7 @@ def register(request) :
             current_user = form.save(commit=False)
             form.save()
             profile = Profile.objects.create(user=current_user)
+            send_mail('This is the subject','Welcome','nchitra2195@gmail.com',['nchitra2111@gmail.com'])
             return redirect("my-login")
     context = {'form' : form}
 

@@ -157,3 +157,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+
+AWS_SES_REGION_NAME = 'us-east-2'
+
+AWS_SES_REGION_ENDPOINT = 'email.us-east-2.amazonaws.com'
+
