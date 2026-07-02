@@ -146,3 +146,14 @@ STORAGES =  {
 }
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_FILE_OVERWRITE = False
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'Ganesh123',
+        'HOST': 'postgres-demo-db.cn44qwsoyxnd.us-east-2.rds.amazonaws.com',   # or RDS endpoint
+        'PORT': '5432',
+    }
+}
