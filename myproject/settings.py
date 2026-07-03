@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-45d)8$x6=!-gdgnx8mbo0zi&v(yhv))=k1ouc1=!)l)qr9%##z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ['http://django-tutorial-dev.us-east-2.elasticbeanstalk.com/']
 
 # Application definition
 
@@ -149,7 +150,7 @@ AWS_S3_FILE_OVERWRITE = False
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': config("DB_ENGINE"),
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'Ganesh123',
